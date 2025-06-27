@@ -53,7 +53,8 @@ public class Book {
     private LocalDateTime updatedAt;
 
     // Constructors
-    public Book() {}
+    public Book() {
+    }
 
     public Book(String title, String author, List<String> categories, Integer totalCopies) {
         this.title = title;
@@ -180,4 +181,4 @@ public class Book {
     public void setUpdatedAt(LocalDateTime updatedAt) {
         this.updatedAt = updatedAt;
     }
-} 
+}

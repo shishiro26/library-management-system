@@ -43,7 +43,8 @@ public class Reservation {
     private LocalDateTime updatedAt;
 
     // Constructors
-    public Reservation() {}
+    public Reservation() {
+    }
 
     public Reservation(String userId, String bookId) {
         this.userId = userId;
@@ -54,9 +55,9 @@ public class Reservation {
 
     // Business methods
     public boolean isOverdue() {
-        return status == ReservationStatus.ACTIVE && 
-               expectedReturnDate != null && 
-               LocalDateTime.now().isAfter(expectedReturnDate);
+        return status == ReservationStatus.ACTIVE &&
+                expectedReturnDate != null &&
+                LocalDateTime.now().isAfter(expectedReturnDate);
     }
 
     public void returnBook() {
@@ -177,4 +178,4 @@ public class Reservation {
     public enum ReservationStatus {
         ACTIVE, RETURNED, CANCELLED, OVERDUE
     }
-} 
+}
