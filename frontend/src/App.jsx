@@ -2,6 +2,8 @@ import { Routes, Route, Navigate } from "react-router";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import useAuth from "./hooks/useAuth";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 
 function PrivateRoute({ children }) {
   const { isAuthenticated } = useAuth();
@@ -24,8 +26,8 @@ function App() {
       <main className="container mx-auto px-4 py-8">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<>Login Page</>} />
-          <Route path="/signup" element={<>Signup Page</>} />
+          <Route path="/login" element={<Login/>} />
+          <Route path="/signup" element={<Signup/>} />
           <Route path="/books" element={<>Book List</>} />
           <Route path="/books/:id" element={<>Book Detail</>} />
           <Route
