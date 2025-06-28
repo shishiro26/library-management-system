@@ -52,7 +52,6 @@ public class Book {
     @LastModifiedDate
     private LocalDateTime updatedAt;
 
-    // Constructors
     public Book() {
     }
 
